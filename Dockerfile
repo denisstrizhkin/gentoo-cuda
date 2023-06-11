@@ -17,3 +17,8 @@ RUN emerge -1 x11-drivers/nvidia-drivers
 RUN echo 'dev-util/nvidia-cuda-toolkit NVIDIA-CUDA' >> /etc/portage/package.license
 RUN echo 'dev-util/nvidia-cuda-toolkit' > /etc/portage/package.accept_keywords
 RUN emerge dev-util/nvidia-cuda-toolkit
+
+RUN rm -rf /var/cache/distfiles/*
+
+CMD [ "/bin/bash", "--login" ]
+ENTRYPOINT [ "/bin/bash", "--login", "-c" ]
