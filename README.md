@@ -1,4 +1,4 @@
-# gentoo stage3 image based cuda/opencl container
+# gentoo-docker-cuda
 
 ## Build this image
 
