@@ -1,11 +1,22 @@
 # gentoo stage3 image based cuda/opencl container
 
-Build this image
+## Build this image
+
+build gentoo-minimal image
+
 ```console
-$ docker build -t gentoocuda:latest https://github.com/denisstrizhkin/gentoo-cuda.git#main
+$ git clone https://github.com/denisstrizhkin/gentoo-docker-minimal.git
+$ cd gentoo-docker-minimal
+$ ./build.sh
 ```
 
-Pass gpu
+build this image
+
 ```console
-$ docker run --rm -it --gpus all gentoocuda:latest nvidia-smi
+$ ./build.sh
+```
+
+## Run image with enabled gpu
+```console
+$ docker run --rm --gpus all gentoocuda nvidia-smi
 ```
