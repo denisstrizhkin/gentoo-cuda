@@ -6,8 +6,6 @@ RUN  emerge -q gcc:12 \
 RUN  rmdir /etc/portage/package.mask \
   && echo 'sys-devel/gcc:13' > /etc/portage/package.mask
 
-RUN emerge -eq @world
-
 RUN  echo 'x11-drivers/nvidia-drivers -X -modules -tools' >> /etc/portage/package.use \
   && echo 'x11-drivers/nvidia-drivers NVIDIA-r2'     >  /etc/portage/package.license \
   && echo 'dev-util/nvidia-cuda-toolkit NVIDIA-CUDA' >> /etc/portage/package.license \
